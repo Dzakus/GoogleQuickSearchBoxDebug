@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="Debug" >
+
+    <ListPreference
+        android:defaultValue="0"
+        android:entries="@array/debug_entries"
+        android:entryValues="@array/debug_values"
+        android:key="debug_features_level"
+        android:title="Debug Level" />
+
+</PreferenceScreen>
