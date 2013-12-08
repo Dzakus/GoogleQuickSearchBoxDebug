@@ -1,12 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="Debug" >
+    android:title="@string/app_name" >
 
     <ListPreference
         android:defaultValue="0"
-        android:entries="@array/debug_entries"
-        android:entryValues="@array/debug_values"
-        android:key="debug_features_level"
-        android:title="Debug Level" />
+        android:entries="@array/pref_debug_level_entries"
+        android:entryValues="@array/pref_debug_level_values"
+        android:key="debug_level"
+        android:title="@string/pref_title_debug_level" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="enable_reminder"
+        android:summary="@string/pref_summary_reminder"
+        android:title="@string/pref_title_reminder" />
+
+    <PreferenceCategory android:title="@string/pref_header_feature" >
+        <SwitchPreference
+            android:key="enable_hide_feature"
+            android:title="@string/pref_title_enable_feature" />
+
+        <com.google.android.googlequicksearchbox.debug.preference.FeaturePreference
+            android:dependency="enable_hide_feature"
+            android:persistent="true"
+            android:summary="@string/pref_summary_select_feature"
+            android:title="@string/pref_title_select_feature" />
+    </PreferenceCategory>
 
 </PreferenceScreen>

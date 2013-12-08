@@ -4,18 +4,25 @@
     <string name="app_name">Google Quick Search Box Debug</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-
-    <string-array name="debug_entries">
+    <string name="title_activity_main">MainActivity</string>
+    
+    <string name="pref_title_debug_level">Debug level</string>
+    <string-array name="pref_debug_level_entries">
         <item>none</item>
         <item>dogfood </item>
         <item>team and dogfood</item>
     </string-array>
-    <string-array name="debug_values">
+    <string-array name="pref_debug_level_values">
         <item>0</item>
         <item>1</item>
         <item>2</item>
     </string-array>
 
-    <string name="title_activity_main">MainActivity</string>
+    <string name="pref_title_reminder">Force enable reminder</string>
+    <string name="pref_summary_reminder">It may not work in every country.</string>
+    <string name="pref_header_feature">Feature</string>
+    <string name="pref_title_enable_feature">Enable freature hook</string>
+    <string name="pref_title_select_feature">Select freature</string>
+    <string name="pref_summary_select_feature">Select the features you want to enable.\nIf list is empty, run Google Search</string>
 
 </resources>

@@ -22,6 +22,7 @@ import android.widget.TextView;
 public class MainActivity extends Activity implements OnClickListener, ServiceConnection {
 
 	private static final String TAG = MainActivity.class.getSimpleName();
+	public static final String REMOTE_API_SERVICE_ACTION = "com.google.android.apps.sidekick.remoteapi.IGoogleNowRemoteService";
 	private Button mButton1;
 	private Button mButton2;
 	private IGoogleNowRemoteService mService;
@@ -75,7 +76,7 @@ public class MainActivity extends Activity implements OnClickListener, ServiceCo
 	 */
 	private boolean bindToRemoteApiService() {
 		try {
-			boolean bindResult = bindService(new Intent(Consts.REMOTE_API_SERVICE_ACTION), this, // ServiceConnection.
+			boolean bindResult = bindService(new Intent(REMOTE_API_SERVICE_ACTION), this, // ServiceConnection.
 					Context.BIND_AUTO_CREATE);
 
 			return bindResult;
